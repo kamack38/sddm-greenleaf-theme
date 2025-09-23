@@ -13,9 +13,10 @@ Column {
 
     Label {
         anchors.horizontalCenter: parent.horizontalCenter
-        font.pointSize: config.HeaderText !=="" ? root.font.pointSize * 3 : 0
+        font.pointSize: Math.max(8, root.font.pointSize * 3)
         color: root.palette.text
         renderType: Text.QtRendering
+        visible: config.HeaderText !== ""
         text: config.HeaderText
     }
 
